@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login Here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    body {
+        background: url('https://source.unsplash.com/1600x900/?library') no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+    }
+    .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .form-container {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    .bounce-in {
+        animation: bounceIn 1s;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes bounceIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+</style>
+<link rel="stylesheet" href="homebg.css">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Login Here</h1>
+        <div class="form-container bounce-in">
+            <form th:action="@{/logAdmin}" method="POST" th:object="${login}">
+                <label for="name">Enter Username</label>
+                <input type="text" name="name" placeholder="Enter username" th:field="*{name}">
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                <br><br>
+
+                <label for="password">Enter Password</label>
+                <input type="password" name="password" placeholder="Enter password" th:field="*{password}">
+                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                <br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

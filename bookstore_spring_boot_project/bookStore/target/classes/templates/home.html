@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="homebg.css">
+    <style>
+    body {
+        background: url('https://source.unsplash.com/1600x900/?library') no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        color:rgba(0, 0, 0, 0.75);
+    }
+    .container {
+        max-width: 1300px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color:  #ffffff ;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color:rgba(0, 0, 0, 0.75);
+    }
+    .form-container {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    .bounce-in {
+        animation: bounceIn 1s;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes bounceIn {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Book Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="available_books">Available Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="my_books">My Books</a>
+                    </li>
+                </ul>
+                <div>
+                    <a class="nav-link text-white" href="book_register">New Book Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center my-5">
+        <h1 class="display-4">WELCOME TO NEW BOOK STORE</h1>
+        <p class="lead text-justify">
+            The Book Haven is your one-stop destination for a diverse selection of books. From bestselling novels to academic texts, our collection spans across all genres and interests. Whether you're a casual reader or a bibliophile, you'll find something that piques your interest. The Book Haven is a premier destination for book lovers of all kinds. Nestled in the heart of Satara, our bookstore offers a serene and inviting atmosphere where you can lose yourself in the magic of reading. At The Book Haven, we believe that every book has the power to transport, educate, and inspire. Our mission is to create a seamless and enriching experience for both our customers and staff. The admin dashboard is designed to simplify operations, allowing us to focus on our love for books and providing exceptional service to our community.
+        </p>
+        <img src="/images/bookk.jpeg" class="img-fluid my-4 minimized-image" alt="Book Store">
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 The Book Haven. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
